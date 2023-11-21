@@ -5,13 +5,15 @@
 
 ## Quickstart
 
-1. Install dependencies:
+`💻 Open 4 terminals 1️⃣ 2️⃣ 3️⃣ 4️⃣`
+
+1. `[💻1️⃣]` Install dependencies:
 
     ```bash
     yarn install
     ```
 
-1. Set environment-variables:
+1. `[💻1️⃣]` Set environment-variables:
 
     - Hardhat:
         ```bash
@@ -35,26 +37,26 @@
         ```
         Fill in the variables in `.env`-file.
 
-1. Run local chain / network:
+1. `[💻2️⃣]` Run local chain / network:
 
     ```bash
     yarn chain
     ```
 
-1. Deploy contracts:
+1. `[💻1️⃣]` Deploy contracts:
 
     ```bash
     yarn deploy
     ```
 
-1. Start Debug-Site:
+1. `[💻3️⃣]` Start Debug-Site:
     
     ```bash
     yarn debug:start
     ```
     Visit: http://localhost:3001
 
-1. Start Frontend:
+1. `[💻4️⃣]` Start Frontend:
 
     ```bash
     yarn start
