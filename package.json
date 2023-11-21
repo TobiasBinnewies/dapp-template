@@ -1,0 +1,31 @@
+{
+  "name": "dapp-template",
+  "version": "0.0.1",
+  "description": "Template for Hardhat / NextJS Development",
+  "author": "Tobias Binnewies",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "account": "yarn workspace @dapp-template/hardhat account",
+    "chain": "yarn workspace @dapp-template/hardhat chain",
+    "fork": "yarn workspace @dapp-template/hardhat fork",
+    "deploy": "yarn workspace @dapp-template/hardhat deploy",
+    "verify": "yarn workspace @dapp-template/hardhat verify",
+    "compile": "yarn workspace @dapp-template/hardhat compile",
+    "generate": "yarn workspace @dapp-template/hardhat generate",
+    "hardhat:lint": "yarn workspace @dapp-template/hardhat lint",
+    "hardhat:lint-staged": "yarn workspace @dapp-template/hardhat lint-staged",
+    "hardhat:test": "yarn workspace @dapp-template/hardhat test",
+
+    "debug:start": "yarn workspace @dapp-template/hardhat-debug dev",
+    
+    "nextjs:start": "yarn workspace @dapp-template/nextjs dev",
+    "start": "yarn run nextjs:start",
+    "next:lint": "yarn workspace @dapp-template/nextjs lint",
+    "next:format": "yarn workspace @dapp-template/nextjs format",
+    "next:check-types": "yarn workspace @dapp-template/nextjs check-types"
+  }
+}
