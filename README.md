@@ -11,6 +11,30 @@
     yarn install
     ```
 
+1. Set environment-variables:
+
+    - Hardhat:
+        ```bash
+        cp packages/hardhat/.env.example packages/hardhat/.env
+        ```
+        Fill in the variables in `.env`-file.
+
+        OR
+
+        Comment out unused variables in `hardhat.config.ts`-file.
+
+    - Hardhat-Debug:
+        ```bash
+        cp packages/hardhat-debug/.env.example packages/hardhat-debug/.env
+        ```
+        Fill in the variables in `.env`-file.
+
+    - NextJS:
+        ```bash
+        cp packages/nextjs/.env.example packages/nextjs/.env
+        ```
+        Fill in the variables in `.env`-file.
+
 1. Run local chain / network:
 
     ```bash
