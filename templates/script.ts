@@ -1,3 +1,4 @@
+// @ts-ignore --> theres no import error when file in packages/hardhat/scripts
 import { ethers } from "hardhat"
 
 async function main() {}
