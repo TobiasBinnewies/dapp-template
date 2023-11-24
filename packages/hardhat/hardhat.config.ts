@@ -26,7 +26,6 @@ const config: HardhatUserConfig = {
   solidity: {
     compilers: [{ version: "0.8.19" }, { version: "0.6.6" }],
   },
-  defaultNetwork: "localhost",
   networks: {
     sepolia: {
       url: process.env.SEPOLIA_RPC_URL,

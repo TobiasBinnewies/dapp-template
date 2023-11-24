@@ -17,6 +17,7 @@
     "hh:lint": "yarn workspace @dapp-template/hardhat lint",
     "hh:lint-staged": "yarn workspace @dapp-template/hardhat lint-staged",
     "hh:test": "yarn workspace @dapp-template/hardhat test",
+    "hh:coverage": "yarn workspace @dapp-template/hardhat coverage",
     "hh:compare-gas": "yarn workspace @dapp-template/hardhat hardhat compare-gas",
     "hh:account": "yarn workspace @dapp-template/hardhat account",
     "hh:chain": "yarn workspace @dapp-template/hardhat chain",
