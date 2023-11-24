@@ -111,7 +111,7 @@ const generateTsAbis: DeployFunction = async function () {
     return `${content}${parseInt(chainId).toFixed(0)}:${JSON.stringify(chainConfig, null, 2)},`
   }, "")
 
-  for (const TARGET_DIR in TARGET_DIRS) {
+  for (const TARGET_DIR of TARGET_DIRS) {
     if (!fs.existsSync(TARGET_DIR)) {
       fs.mkdirSync(TARGET_DIR)
     }
