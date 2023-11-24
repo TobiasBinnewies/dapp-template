@@ -3,4 +3,4 @@ import { network } from "hardhat"
 
 const config = getNetworkConfig(network.config.chainId)
 
-config.isDevelopment ? describe.skip : describe("Contract Unit Tests", () => {})
+!config.isDevelopment ? describe.skip : describe("Contract Staging Tests", () => {})
