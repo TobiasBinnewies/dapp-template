@@ -1,12 +1,10 @@
-import "./tasks/compare-gas";
-import "@nomicfoundation/hardhat-toolbox";
-import * as dotenv from "dotenv";
-import "hardhat-deploy";
-import { HardhatUserConfig } from "hardhat/config";
-
+import "./tasks"
+import "@nomicfoundation/hardhat-toolbox"
+import * as dotenv from "dotenv"
+import "hardhat-deploy"
+import { HardhatUserConfig } from "hardhat/config"
 
 dotenv.config()
-
 
 if (process.env.SEPOLIA_RPC_URL === undefined) {
   throw "Please set the SEPOLIA_RPC_URL environment variable"

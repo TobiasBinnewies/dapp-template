@@ -9,23 +9,36 @@
     "packages/*"
   ],
   "scripts": {
-    "account": "yarn workspace @dapp-template/hardhat account",
-    "chain": "yarn workspace @dapp-template/hardhat chain",
-    "fork": "yarn workspace @dapp-template/hardhat fork",
-    "deploy": "yarn workspace @dapp-template/hardhat deploy",
-    "verify": "yarn workspace @dapp-template/hardhat verify",
-    "compile": "yarn workspace @dapp-template/hardhat compile",
-    "generate": "yarn workspace @dapp-template/hardhat generate",
-    "hardhat:lint": "yarn workspace @dapp-template/hardhat lint",
-    "hardhat:lint-staged": "yarn workspace @dapp-template/hardhat lint-staged",
-    "hardhat:test": "yarn workspace @dapp-template/hardhat test",
+    "ws:hh": "yarn workspace @dapp-template/hardhat",
+    "ws:debug": "yarn workspace @dapp-template/hardhat-debug",
+    "ws:nextjs": "yarn workspace @dapp-template/nextjs",
+
+    "hh": "yarn workspace @dapp-template/hardhat hardhat",
+    "hh:lint": "yarn workspace @dapp-template/hardhat lint",
+    "hh:lint-staged": "yarn workspace @dapp-template/hardhat lint-staged",
+    "hh:test": "yarn workspace @dapp-template/hardhat test",
+    "hh:compare-gas": "yarn workspace @dapp-template/hardhat hardhat compare-gas",
+    "hh:account": "yarn workspace @dapp-template/hardhat account",
+    "hh:chain": "yarn workspace @dapp-template/hardhat chain",
+    "hh:fork": "yarn workspace @dapp-template/hardhat fork",
+    "hh:deploy": "yarn workspace @dapp-template/hardhat deploy",
+    "hh:verify": "yarn workspace @dapp-template/hardhat verify",
+    "hh:compile": "yarn workspace @dapp-template/hardhat compile",
+    "hh:generate": "yarn workspace @dapp-template/hardhat generate",
+    "account": "yarn run hh:account",
+    "chain": "yarn run hh:chain",
+    "fork": "yarn run hh:fork",
+    "deploy": "yarn run hh:deploy",
+    "verify": "yarn run hh:verify",
+    "compile": "yarn run hh:compile",
+    "generate": "yarn run hh:generate",
 
     "debug:start": "yarn workspace @dapp-template/hardhat-debug dev",
     
     "nextjs:start": "yarn workspace @dapp-template/nextjs dev",
-    "start": "yarn run nextjs:start",
     "next:lint": "yarn workspace @dapp-template/nextjs lint",
     "next:format": "yarn workspace @dapp-template/nextjs format",
-    "next:check-types": "yarn workspace @dapp-template/nextjs check-types"
+    "next:check-types": "yarn workspace @dapp-template/nextjs check-types",
+    "start": "yarn run nextjs:start"
   }
 }
