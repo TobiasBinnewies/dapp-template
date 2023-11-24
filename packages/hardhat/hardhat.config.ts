@@ -24,7 +24,7 @@ if (process.env.COINMARKETCAP_API_KEY === undefined) {
 
 const config: HardhatUserConfig = {
   solidity: {
-    compilers: [{ version: "0.8.19" }],
+    compilers: [{ version: "0.8.19" }, { version: "0.6.6" }],
   },
   defaultNetwork: "localhost",
   networks: {
