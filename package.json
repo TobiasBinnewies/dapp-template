@@ -40,6 +40,8 @@
     "next:lint": "yarn workspace @dapp-template/nextjs lint",
     "next:format": "yarn workspace @dapp-template/nextjs format",
     "next:check-types": "yarn workspace @dapp-template/nextjs check-types",
-    "start": "yarn run nextjs:start"
+    "next:export": "yarn workspace @dapp-template/nextjs export",
+    "start": "yarn run nextjs:start",
+    "export": "yarn run nextjs:export"
   }
 }
