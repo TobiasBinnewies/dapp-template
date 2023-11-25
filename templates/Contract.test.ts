@@ -26,7 +26,7 @@ const config = getNetworkConfig(network.config.chainId)
         // For Events
         await new Promise<void>(async (resolve, reject) => {
           setTimeout(async () => reject("Timeout"), 300000) // 5 min
-          await contract.once("...", async (id: number) => {
+          await contract.once("...", async (/* Event Attributes */) => {
             // ...
             resolve()
           })
