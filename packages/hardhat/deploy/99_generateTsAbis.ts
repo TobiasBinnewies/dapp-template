@@ -5,10 +5,9 @@
  * These definitions are used to derive the types needed in the custom scaffold-eth hooks, for example.
  * This script should run as the last deploy script.
  *  */
-
 import * as fs from "fs"
-import prettier from "prettier"
 import { DeployFunction } from "hardhat-deploy/types"
+import prettier from "prettier"
 
 const generatedContractComment = `
 /**
@@ -104,7 +103,9 @@ function getContractDataFromDeployments() {
  * This script should be run last.
  */
 const generateTsAbis: DeployFunction = async function () {
-  const TARGET_DIRS = process.env.UPDATE_FRONTEND ? ["../hardhat-debug/contracts/", "../nextjs/constants/"] : ["../hardhat-debug/contracts/"]
+  const TARGET_DIRS = process.env.UPDATE_FRONTEND
+    ? ["../hardhat-debug/contracts/", "../nextjs/constants/"]
+    : ["../hardhat-debug/contracts/"]
   const allContractsData = getContractDataFromDeployments()
 
   const fileContent = Object.entries(allContractsData).reduce((content, [chainId, chainConfig]) => {
