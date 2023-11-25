@@ -1,6 +1,7 @@
-import { DeployFunction } from "hardhat-deploy/types"
-import { getNetworkConfig } from "../helper-hardhat-config"
-import { HardhatRuntimeEnvironment } from "hardhat/types"
+import { getNetworkConfig } from "../helper-hardhat-config";
+import { DeployFunction } from "hardhat-deploy/types";
+import { HardhatRuntimeEnvironment } from "hardhat/types";
+
 
 const deployMocks: DeployFunction = async function ({
   getNamedAccounts,
@@ -22,6 +23,7 @@ const deployMocks: DeployFunction = async function ({
     from: deployer,
     args: args,
     log: true,
+    waitConfirmations: config.blockConfirmations,
   })
 
   log("Mocks deployed!")

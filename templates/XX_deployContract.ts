@@ -1,8 +1,9 @@
 // @ts-nocheck --> theres no import error when file in packages/hardhat/deploy
-import { getNetworkConfig } from "../helper-hardhat-config"
-import { verify } from "../utils/verify"
-import { DeployFunction } from "hardhat-deploy/types"
-import { HardhatRuntimeEnvironment } from "hardhat/types"
+import { getNetworkConfig } from "../helper-hardhat-config";
+import { verify } from "../utils/verify";
+import { DeployFunction } from "hardhat-deploy/types";
+import { HardhatRuntimeEnvironment } from "hardhat/types";
+
 
 const deploy: DeployFunction = async function ({
   getNamedAccounts,
@@ -19,6 +20,7 @@ const deploy: DeployFunction = async function ({
     from: deployer,
     args: args,
     log: true,
+    waitConfirmations: config.blockConfirmations,
   })
 
   if (!config.isDevelopment && process.env.ETHERSCAN_API_KEY) {
