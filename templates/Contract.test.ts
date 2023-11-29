@@ -23,7 +23,7 @@ const config = getNetworkConfig(network.config.chainId)
           deployer
         )
 
-        // For Events
+        // For Events [1]
         await new Promise<void>(async (resolve, reject) => {
           setTimeout(async () => reject("Timeout"), 300000) // 5 min
           await contract.once("...", async (/* Event Attributes */) => {
@@ -32,6 +32,17 @@ const config = getNetworkConfig(network.config.chainId)
           })
           await contract.function()
         })
+
+        // For Events [2]
+        const tx = await contract.function()
+        const receipt = await tx.wait()
+        const event = receipt?.logs.find(
+          (e) => (e as EventLog).eventName === "..."
+        ) as EventLog
+        if (!mintedEvent) {
+          throw new Error("No ... event found")
+        }
+        // ... --> event.args.[...]
     })
 
     describe("contructor", () => {})

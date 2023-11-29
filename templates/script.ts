@@ -1,5 +1,5 @@
 // @ts-ignore --> theres no import error when file in packages/hardhat/scripts
-import { ethers } from "hardhat"
+import { ethers, deployments } from "hardhat"
 
 async function main() {}
 
